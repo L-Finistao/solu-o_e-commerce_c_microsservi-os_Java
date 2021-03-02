@@ -70,9 +70,7 @@
         </div>
         <div class="col-md-8 order-md-1">
             <h4 class="mb-3">Billing address</h4>
-            <form action="http:localhost:8080/v1/checkout" class="needs-validation" novalidate="">
-                <input type="hidden" name="products[]" value="notibook">
-                <input type="hidden" name="products[]" value="mouse game">
+            <form class="needs-validation" novalidate="">
                 <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="firstName">First name</label>
@@ -89,6 +87,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="mb-3">
                     <label for="username">Username</label>
                     <div class="input-group">
@@ -96,11 +95,12 @@
                             <span class="input-group-text">@</span>
                         </div>
                         <input class="form-control" id="username" placeholder="Username" required="" type="text">
-                        <div class="invalid-feedback" style=" width: 100%;">
+                        <div class="invalid-feedback" style="width: 100%;">
                             Your username is required.
                         </div>
                     </div>
                 </div>
+
                 <div class="mb-3">
                     <label for="email">Email <span class="text-muted">(Optional)</span></label>
                     <input class="form-control" id="email" placeholder="you@example.com" type="email">

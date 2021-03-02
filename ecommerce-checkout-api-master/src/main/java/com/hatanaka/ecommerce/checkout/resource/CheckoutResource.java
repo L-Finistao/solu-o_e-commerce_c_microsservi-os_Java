@@ -1,4 +1,4 @@
-package com.hatanaka.ecommerce.checkout.resource.checkout;
+package com.hatanaka.ecommerce.checkout.resource;
 
 import com.hatanaka.ecommerce.checkout.event.CheckoutCreatedEvent;
 import com.hatanaka.ecommerce.checkout.streaming.CheckoutCreatedSource;
@@ -20,6 +20,9 @@ public class CheckoutResource {
     public ResponseEntity<Void> create() {
         final CheckoutCreatedEvent checkoutCreatedEvent = CheckoutCreatedEvent.newBuilder()
                 .setCheckoutCode("123")
-         return ResponseEntity.ok().build();
+                .build();
+//        checkoutCreatedSource.output().send(MessageBuilder.withPayload("asdasdasd").build());
+        checkoutCreatedSource.output().send(MessageBuilder.withPayload(checkoutCreatedEvent).build());
+        return ResponseEntity.ok().build();
     }
 }
