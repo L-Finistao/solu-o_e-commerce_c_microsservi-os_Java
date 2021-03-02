@@ -1,4 +1,4 @@
-package com.hatanaka.ecommerce.checkout.streaming;
+package com.hatanaka.ecommerce.checkout.resource.checkout.streaming;
 
 import org.springframework.cloud.stream.annotation.Input;
 import org.springframework.messaging.SubscribableChannel;
